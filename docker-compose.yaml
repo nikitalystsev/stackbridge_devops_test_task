@@ -1,0 +1,14 @@
+services:
+  backend-python:
+    build:
+      context: backend
+      dockerfile: Dockerfile
+    image: backend-python:0.1.0
+    container_name: backend-python
+    networks:
+      - my-net
+
+networks:
+  my-net:
+    driver: bridge
+    name: my-net
